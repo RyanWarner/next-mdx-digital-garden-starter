@@ -1,6 +1,14 @@
 {
   "presets": ["next/babel"],
   "plugins": [
-    "@babel/plugin-proposal-export-default-from"
+    "@babel/plugin-proposal-export-default-from",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ]
+      }
+    ]
   ]
 }
