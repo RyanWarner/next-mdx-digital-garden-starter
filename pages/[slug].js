@@ -3,11 +3,18 @@ import fs from 'fs'
 import MDX from '@mdx-js/runtime'
 import ReactDOM from 'react-dom/server'
 import path from 'path'
+import matter from 'gray-matter'
 const glob = require('glob-fs')({ gitignore: true })
+
 import * as components from '../components'
 
-const Post = ({ mdxHtml }) => {
-  return <div dangerouslySetInnerHTML={{ __html: mdxHtml }} />
+const Post = ({ mdxHtml, frontMatter }) => {
+  return (
+    <>
+      <h1>{frontMatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: mdxHtml }} />
+    </>
+  )
 }
 
 export async function getStaticPaths() {
@@ -39,6 +46,9 @@ export async function getStaticProps({ params: { slug } }) {
     return filename.replace('.mdx', '') === slug
   })[0]
 
+  const mdxSource = fs.readFileSync(path.join(fullPath))
+  const { content, data } = matter(mdxSource)
+
   if (!fullPath) {
     console.warn('No MDX file found for slug')
   }
@@ -47,9 +57,10 @@ export async function getStaticProps({ params: { slug } }) {
     props: {
       mdxHtml: ReactDOM.renderToStaticMarkup(
         <MDX components={components}>
-          {fs.readFileSync(path.join(fullPath))}
+          {content}
         </MDX>
-      )
+      ),
+      frontMatter: data || {}
     }
   }
 }
