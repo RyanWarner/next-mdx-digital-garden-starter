@@ -16,6 +16,7 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.10.4",
     "glob-fs": "^0.1.7"
   }
 }

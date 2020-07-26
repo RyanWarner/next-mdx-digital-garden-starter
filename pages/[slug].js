@@ -4,6 +4,7 @@ import MDX from '@mdx-js/runtime'
 import ReactDOM from 'react-dom/server'
 import path from 'path'
 const glob = require('glob-fs')({ gitignore: true })
+import * as components from '../components'
 
 const Post = ({ mdxHtml }) => {
   return <div dangerouslySetInnerHTML={{ __html: mdxHtml }} />
@@ -26,7 +27,7 @@ export async function getStaticPaths() {
   return {
     paths,
     fallback: false
-  };
+  }
 }
 
 export async function getStaticProps({ params: { slug } }) {
@@ -45,7 +46,9 @@ export async function getStaticProps({ params: { slug } }) {
   return {
     props: {
       mdxHtml: ReactDOM.renderToStaticMarkup(
-        <MDX>{fs.readFileSync(path.join(fullPath))}</MDX>
+        <MDX components={components}>
+          {fs.readFileSync(path.join(fullPath))}
+        </MDX>
       )
     }
   }
