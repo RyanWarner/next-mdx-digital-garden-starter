@@ -2,9 +2,8 @@
 import fs from 'fs'
 import MDX from '@mdx-js/runtime'
 import ReactDOM from 'react-dom/server'
-import path from 'path'
 import matter from 'gray-matter'
-const glob = require('glob-fs')({ gitignore: true })
+import glob from 'fast-glob'
 
 import * as components from '../components'
 
@@ -18,15 +17,17 @@ const Post = ({ mdxHtml, frontMatter }) => {
 }
 
 export async function getStaticPaths() {
-  const files = glob.readdirSync('content/**/*.mdx')
+  const files = glob.sync('content/**/*.mdx')
 
   const paths = files
-    .map(slug => {
-      const split = slug.split('/')
+    .map(file => {
+      const split = file.split('/')
       const filename = split[split.length - 1]
+      const slug = filename.replace('.mdx', '')
+
       return {
         params: {
-          slug: filename.replace('.mdx', '')
+          slug
         }
       }
     })
@@ -38,7 +39,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const files = glob.readdirSync('content/**/*.mdx')
+  const files = glob.sync('content/**/*.mdx')
 
   const fullPath = files.filter(item => {
     const split = item.split('/')
@@ -46,7 +47,7 @@ export async function getStaticProps({ params: { slug } }) {
     return filename.replace('.mdx', '') === slug
   })[0]
 
-  const mdxSource = fs.readFileSync(path.join(fullPath))
+  const mdxSource = fs.readFileSync(fullPath)
   const { content, data } = matter(mdxSource)
 
   if (!fullPath) {

@@ -11,13 +11,13 @@
     "@mdx-js/loader": "^1.6.11",
     "@mdx-js/runtime": "^1.6.11",
     "@next/mdx": "^9.4.4",
+    "fast-glob": "^3.2.4",
     "gray-matter": "^4.0.2",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-export-default-from": "^7.10.4",
-    "glob-fs": "^0.1.7"
+    "@babel/plugin-proposal-export-default-from": "^7.10.4"
   }
 }
