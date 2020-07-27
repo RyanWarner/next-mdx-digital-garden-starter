@@ -1,0 +1,25 @@
+{
+  "name": "nextjs-blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^1.6.11",
+    "@mdx-js/runtime": "^1.6.11",
+    "@next/mdx": "^9.4.4",
+    "fast-glob": "^3.2.4",
+    "gray-matter": "^4.0.2",
+    "next": "9.4.4",
+    "prop-types": "^15.7.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.10.4",
+    "babel-plugin-module-resolver": "^4.0.0"
+  }
+}
