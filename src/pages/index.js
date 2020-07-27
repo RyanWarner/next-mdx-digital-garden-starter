@@ -9,10 +9,17 @@ import { SEO } from '../components'
 
 export default function Home({ allMdx }) {
   return (
-    <div className="container">
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        fontFamily: `'Exo 2', sans-serif`
+      }}
+      >
       <SEO />
 
-      <main>
+      <main style={{ maxWidth: '50vw', width: '100%'}}>
         <h1 className="title">
           NextJS + MDX Digital Garden Starter
         </h1>

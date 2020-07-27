@@ -5,13 +5,26 @@ import ReactDOM from 'react-dom/server'
 import matter from 'gray-matter'
 import glob from 'fast-glob'
 
-import * as components from '../components'
+import * as components from 'components'
 
 const Post = ({ mdxHtml, frontMatter }) => {
   return (
     <>
-      <h1>{frontMatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: mdxHtml }} />
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          fontFamily: `'Exo 2', sans-serif`
+        }}
+      >
+        <components.SEO title={frontMatter.title} />
+        <main style={{ maxWidth: '50vw', width: '100%'}}>
+        <components.Header />
+        <h1>{frontMatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: mdxHtml }} />
+        </main>
+      </div>
     </>
   )
 }
