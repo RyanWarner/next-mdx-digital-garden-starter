@@ -3,7 +3,8 @@ import Head from 'next/head'
 const siteMetadata = {
   title: 'NextJS MDX Digital Garden Starter',
   description: 'An opinionated starting point for authoring interactive content using MDX and NextJS',
-  twitterHandle: '@RyanWarnerCodes'
+  twitterHandle: '@RyanWarnerCodes',
+  favicon: '/favicon.png'
 }
 
 export default function SEO({
@@ -15,7 +16,7 @@ export default function SEO({
 }) {
   return (
     <Head>
-      <title>{title || 'hello'}</title>
+      <title>{title}</title>
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
       <meta property='og:image' content={ogImage} />
