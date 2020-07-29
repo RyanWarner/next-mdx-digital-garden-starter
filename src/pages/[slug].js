@@ -15,11 +15,12 @@ const Post = ({ mdxHtml, frontMatter }) => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          padding: '0 30px',
           fontFamily: `'Exo 2', sans-serif`
         }}
       >
         <components.SEO title={frontMatter.title} />
-        <main style={{ maxWidth: '50vw', width: '100%'}}>
+        <main style={{ maxWidth: '800px', width: '100%'}}>
         <components.Header />
         <h1>{frontMatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: mdxHtml }} />

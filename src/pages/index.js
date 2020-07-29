@@ -14,12 +14,13 @@ export default function Home({ allMdx }) {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        padding: '0 30px',
         fontFamily: `'Exo 2', sans-serif`
       }}
       >
       <SEO />
 
-      <main style={{ maxWidth: '50vw', width: '100%'}}>
+      <main style={{ maxWidth: '800px', width: '100%'}}>
         <h1 className="title">
           NextJS + MDX Digital Garden Starter
         </h1>
