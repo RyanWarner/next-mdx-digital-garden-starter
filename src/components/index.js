@@ -1,4 +1,5 @@
 export SEO from './SEO'
 export Header from './Header'
 export Example from './Example'
+export PostSnippet from './PostSnippet'
 export HomePage from './HomePage'

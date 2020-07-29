@@ -16,7 +16,8 @@ export const Main = ({ children }) =>
     style={{
       maxWidth: '820px',
       padding: '0 30px',
-      width: '100%'
+      width: '100%',
+      marginTop: '100px'
     }}
   >
     {children}
@@ -27,7 +28,8 @@ export const H2 = ({ children }) =>
   style={{
     letterSpacing: '0.07em',
     textTransform: 'uppercase',
-    fontSize: '16px'
+    fontSize: '16px',
+    marginTop: '50px'
   }}
 >
   {children}

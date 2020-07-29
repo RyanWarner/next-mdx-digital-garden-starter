@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { SEO } from 'components'
+import { SEO, PostSnippet } from 'components'
 import * as S from './styles'
 
 export default function HomePage ({ allMdx }) {
@@ -9,7 +9,8 @@ export default function HomePage ({ allMdx }) {
       <SEO />
       <S.Main>
         <h1>
-          NextJS + MDX Digital Garden Starter
+          NextJS + MDX
+          <br />Digital Garden Starter
         </h1>
 
         <ul>
@@ -31,12 +32,7 @@ export default function HomePage ({ allMdx }) {
           {allMdx.map(item => {
             return (
               <li key={item.slug}>
-                <Link href={item.slug}>
-                  <a>
-                    {item.frontMatter.title}
-                  </a>
-                </Link>
-                <p>{item.frontMatter.date}</p>
+                <PostSnippet {...item} />
               </li>
             )
           })}
