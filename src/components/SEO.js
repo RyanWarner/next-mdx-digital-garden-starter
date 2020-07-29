@@ -24,7 +24,7 @@ export default function SEO({
       <meta name='twitter:card' content='summary_large_image' />
       <link rel='icon' href={favicon} />
       <meta name='twitter:image' content={ogImage} />
-      <link href='https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap' rel='stylesheet' />
+      <link href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap' rel='stylesheet' />
     </Head>
   )
 }

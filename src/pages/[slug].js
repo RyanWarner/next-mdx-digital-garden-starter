@@ -16,7 +16,7 @@ const Post = ({ mdxHtml, frontMatter }) => {
           flexDirection: 'column',
           alignItems: 'center',
           padding: '0 30px',
-          fontFamily: `'Exo 2', sans-serif`
+          fontFamily: `'Lato', sans-serif`
         }}
       >
         <components.SEO title={frontMatter.title} />
