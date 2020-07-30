@@ -7,7 +7,9 @@ export default function PostSnippet ({ slug, frontMatter }) {
     <>
       <Link href={slug}>
         <a style={{
-          fontSize: '25px'
+          fontSize: '25px',
+          textDecoration: 'none',
+          color: 'black'
         }}>
           {frontMatter.title}
         </a>
