@@ -18,7 +18,7 @@ export const Wrap = ({ children }) => (
 export const Main = ({ children }) => (
   <main
     style={{
-      maxWidth: '820px',
+      maxWidth: '720px',
       padding: '0 30px',
       width: '100%',
       marginTop: '100px',

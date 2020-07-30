@@ -20,7 +20,7 @@ const Post = ({ mdxHtml, frontMatter }) => {
         }}
       >
         <components.SEO title={frontMatter.title} />
-        <main style={{ maxWidth: '800px', width: '100%'}}>
+        <main style={{ maxWidth: '720px', width: '100%'}}>
         <components.Header />
         <h1>{frontMatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: mdxHtml }} />
