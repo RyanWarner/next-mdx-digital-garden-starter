@@ -5,7 +5,10 @@ export const Wrap = ({ children }) => (
       flexDirection: 'column',
       alignItems: 'center',
       padding: '0 30px',
-      fontFamily: `'Lato', sans-serif`
+      fontFamily: `'Lato', sans-serif`,
+      backgroundColor: '#FBFBF9',
+      minHeight: '100vh',
+      boxSizing: 'border-box'
     }}
   >
     {children}
@@ -44,7 +47,10 @@ export const GitHubButton = ({ children, ...rest }) => (
       color: 'black',
       textDecoration: 'none',
       marginTop: '20px',
-      display: 'flex'
+      display: 'grid',
+      gap: '14px',
+      gridTemplateColumns: 'auto auto',
+      alignSelf: 'flex-start'
     }}
   >
     {children}

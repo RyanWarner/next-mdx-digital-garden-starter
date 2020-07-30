@@ -31,7 +31,7 @@ export default function HomePage ({ allMdx }) {
 
         <S.GitHubButton href={githubUrl}>
           <GitHub />
-          View source on GitHub
+          <span>View source on GitHub</span>
         </S.GitHubButton>
 
         <S.H2>
