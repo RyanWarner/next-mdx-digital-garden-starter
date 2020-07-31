@@ -7,29 +7,6 @@ import glob from 'fast-glob'
 
 import * as components from 'components'
 
-const Post = ({ mdxHtml, frontMatter }) => {
-  return (
-    <>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '0 30px',
-          fontFamily: `'Lato', sans-serif`
-        }}
-      >
-        <components.SEO title={frontMatter.title} />
-        <main style={{ maxWidth: '720px', width: '100%'}}>
-        <components.Header />
-        <h1>{frontMatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: mdxHtml }} />
-        </main>
-      </div>
-    </>
-  )
-}
-
 export async function getStaticPaths() {
   const files = glob.sync('src/content/**/*.mdx')
 
@@ -80,4 +57,4 @@ export async function getStaticProps({ params: { slug } }) {
   }
 }
 
-export default Post
+export default components.PostPage

@@ -1,4 +1,4 @@
-# Next + MDX Digital Garden Starter
+# 🌱 Next + MDX Digital Garden Starter
 
 An opinionated starting point for Digital Garden content authoring.
 
