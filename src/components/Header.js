@@ -17,8 +17,8 @@ const Header = props =>
     <Link href='/'>
       <a>Home</a>
     </Link>
-    <Link href='/'>
-      <a>Blog</a>
+    <Link href='/about'>
+      <a>About</a>
     </Link>
   </Nav>
 
