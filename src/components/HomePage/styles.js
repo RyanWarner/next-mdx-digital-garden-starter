@@ -116,3 +116,13 @@ export const ListItem = ({ children }) => (
     {children}
   </li>
 )
+
+export const PostListItem = ({ children }) => (
+  <li
+    style={{
+      marginBottom: '30px'
+    }}
+  >
+    {children}
+  </li>
+)

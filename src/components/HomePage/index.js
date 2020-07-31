@@ -39,9 +39,9 @@ export default function HomePage ({ allMdx }) {
         </S.H2>
         <S.PostList>
           {allMdx.map(item => (
-            <li key={item.slug}>
+            <S.PostListItem key={item.slug}>
               <PostSnippet {...item} />
-            </li>
+            </S.PostListItem>
           ))}
         </S.PostList>
       </S.Main>
