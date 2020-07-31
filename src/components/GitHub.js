@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default props =>
+const GitHub = props =>
   <svg
     {...props}
     role='img'
@@ -16,3 +16,5 @@ export default props =>
       fill='#000'
     />
   </svg>
+
+export default GitHub
