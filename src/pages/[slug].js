@@ -7,8 +7,11 @@ import glob from 'fast-glob'
 
 import * as components from 'components'
 
+// This glob is what will be used to generate static routes
+const contentGlob = 'src/content/**/*.mdx'
+
 export async function getStaticPaths() {
-  const files = glob.sync('src/content/**/*.mdx')
+  const files = glob.sync(contentGlob)
 
   const paths = files
     .map(file => {
@@ -30,7 +33,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const files = glob.sync('src/content/**/*.mdx')
+  const files = glob.sync(contentGlob)
 
   const fullPath = files.filter(item => {
     const split = item.split('/')
