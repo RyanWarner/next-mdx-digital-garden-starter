@@ -4,7 +4,8 @@ const siteMetadata = {
   title: 'NextJS MDX Digital Garden Starter',
   description: 'An opinionated starting point for authoring interactive content using MDX and NextJS',
   twitterHandle: '@RyanWarnerCodes',
-  favicon: '/favicon.png'
+  favicon: '/favicon.png',
+  ogImage: '/ogImage.png'
 }
 
 export default function SEO({
