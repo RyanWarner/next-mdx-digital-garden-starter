@@ -1,128 +1,71 @@
-export const Wrap = ({ children }) => (
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      padding: '0 30px',
-      fontFamily: `'Lato', sans-serif`,
-      backgroundColor: '#FBFBF9',
-      minHeight: '100vh',
-      boxSizing: 'border-box'
-    }}
-  >
-    {children}
-  </div>
-)
+import styled from 'styled-components'
 
-export const Main = ({ children }) => (
-  <main
-    style={{
-      maxWidth: '700px',
-      padding: '0 30px',
-      width: '100%',
-      marginTop: '100px',
-      position: 'relative',
-      display: 'flex',
-      flexDirection: 'column'
-    }}
-  >
-    {children}
-  </main>
-)
+export const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+  font-family: 'Lato', sans-serif;
+  background-color: #FBFBF9;
+  min-height: 100vh;
+  box-sizing: border-box;
+`
 
-export const H1 = ({ children }) => (
-  <h1>
-    {children}
-  </h1>
-)
+export const Main = styled.main`
+  max-width: 700px;
+  padding: 0 30px;
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+`
 
-export const GitHubButton = ({ children, ...rest }) => (
-  <a
-    {...rest}
-    style={{
-      borderRadius: '4px',
-      border: '1px solid black',
-      padding: '10px 12px',
-      color: 'black',
-      textDecoration: 'none',
-      marginTop: '20px',
-      display: 'grid',
-      gap: '14px',
-      gridTemplateColumns: 'auto auto',
-      alignSelf: 'flex-start'
-    }}
-  >
-    {children}
-  </a>
-)
+export const H1 = styled.h1``
 
-export const Seedling = ({ children }) => (
-  <div
-    style={{
-      fontSize: '30px',
-      position: 'absolute',
-      left: '-10px',
-      top: '16px'
-    }}
-  >
-    {children}
-  </div>
-)
+export const GitHubButton = styled.a`
+  border-radius: 4px;
+  border: 1px solid black;
+  padding: 10px 12px;
+  color: black;
+  text-decoration: none;
+  margin-top: 20px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: auto auto;
+  align-self: flex-start;
+`
 
-export const H2 = ({ children }) => (
-  <main
-    style={{
-      letterSpacing: '0.07em',
-      textTransform: 'uppercase',
-      fontSize: '16px',
-      marginTop: '70px'
-    }}
-  >
-    {children}
-  </main>
-)
+export const Seedling = styled.div`
+  font-size: 30px;
+  position: absolute;
+  left: -10px;
+  top: 16px;
+`
 
-export const FeatureList = ({ children }) => (
-  <ul
-    style={{
-      margin: '18px 0 0 0',
-      padding: '0'
-    }}
-  >
-    {children}
-  </ul>
-)
+export const H2 = styled.h2`
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 70px;
+`
 
-export const PostList = ({ children }) => (
-  <ul
-    style={{
-      margin: '22px 0 0 0',
-      padding: '0',
-      listStyleType: 'none'
-    }}
-  >
-    {children}
-  </ul>
-)
+export const FeatureList = styled.ul`
+  margin: 18px 0 0 0;
+  padding: 0;
+`
 
-export const ListItem = ({ children }) => (
-  <li
-    style={{
-      fontSize: '21px',
-      marginBottom: '16px'
-    }}
-  >
-    {children}
-  </li>
-)
+export const PostList = styled.ul`
+  margin: 22px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+`
 
-export const PostListItem = ({ children }) => (
-  <li
-    style={{
-      marginBottom: '30px'
-    }}
-  >
-    {children}
-  </li>
-)
+export const ListItem = styled.li`
+  font-size: 21px;
+  margin-bottom: 16px;
+`
+
+export const PostListItem = styled.li`
+  margin-bottom: 30px;
+`

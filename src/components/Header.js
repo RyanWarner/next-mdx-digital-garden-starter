@@ -1,16 +1,11 @@
 import Link from 'next/link'
+import styled from 'styled-components'
 
-const Nav = ({ children }) => (
-  <nav
-    style={{
-      height: '70px',
-      display: 'flex',
-      alignItems: 'center'
-    }}
-  >
-    {children}
-  </nav>
-)
+const Nav = styled.nav`
+  height: 70px;
+  display: flex;
+  align-items: center;
+`
 
 const Header = props =>
   <Nav>
