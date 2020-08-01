@@ -1,17 +1,11 @@
-import * as S from './styles'
-import { SEO, Header } from 'components'
-
 import { MDXProvider } from '@mdx-js/react'
 
+import * as S from './styles'
+import { SEO, Header } from 'components'
 import * as components from 'components'
 
-// import { p as P } from 'components/MDXOverrideComponents'
-
-// const components = {
-//   p: props => <P {...props} />
-// }
-
-const PostPage = ({ mdxHtml, frontMatter, fullPath }) => {
+const PostPage = ({ frontMatter, fullPath }) => {
+  // TODO: dynamic path
   const Doc = require(`../../../${fullPath}`).default
   return (
     <>
@@ -23,7 +17,6 @@ const PostPage = ({ mdxHtml, frontMatter, fullPath }) => {
           <MDXProvider components={components}>
             <Doc />
           </MDXProvider>
-          {/* <div dangerouslySetInnerHTML={{ __html: mdxHtml }} /> */}
         </S.Main>
       </S.Wrap>
     </>
