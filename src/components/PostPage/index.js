@@ -1,7 +1,18 @@
 import * as S from './styles'
 import { SEO, Header } from 'components'
 
-const PostPage = ({ mdxHtml, frontMatter }) => {
+import { MDXProvider } from '@mdx-js/react'
+
+import * as components from 'components'
+
+// import { p as P } from 'components/MDXOverrideComponents'
+
+// const components = {
+//   p: props => <P {...props} />
+// }
+
+const PostPage = ({ mdxHtml, frontMatter, fullPath }) => {
+  const Doc = require(`../../../${fullPath}`).default
   return (
     <>
       <S.Wrap>
@@ -9,7 +20,10 @@ const PostPage = ({ mdxHtml, frontMatter }) => {
         <S.Main>
           <Header />
           <h1>{frontMatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: mdxHtml }} />
+          <MDXProvider components={components}>
+            <Doc />
+          </MDXProvider>
+          {/* <div dangerouslySetInnerHTML={{ __html: mdxHtml }} /> */}
         </S.Main>
       </S.Wrap>
     </>

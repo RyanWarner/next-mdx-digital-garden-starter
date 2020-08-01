@@ -10,6 +10,7 @@
   "dependencies": {
     "@mdx-js/loader": "1.6.16",
     "@mdx-js/runtime": "1.6.16",
+    "@mdx-js/tag": "^0.20.3",
     "@next/mdx": "9.5.1",
     "babel-plugin-styled-components": "^1.11.1",
     "fast-glob": "3.2.4",
