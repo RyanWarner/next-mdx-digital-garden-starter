@@ -11,12 +11,14 @@
     "@mdx-js/loader": "1.6.16",
     "@mdx-js/runtime": "1.6.16",
     "@next/mdx": "9.5.1",
+    "babel-plugin-styled-components": "^1.11.1",
     "fast-glob": "3.2.4",
     "gray-matter": "4.0.2",
     "next": "9.5.1",
     "prop-types": "15.7.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-export-default-from": "7.10.4",
