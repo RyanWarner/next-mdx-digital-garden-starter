@@ -1,12 +1,7 @@
-import { MDXProvider } from '@mdx-js/react'
-
 import * as S from './styles'
 import { SEO, Header } from 'components'
-import * as components from 'components'
 
-const PostPage = ({ frontMatter, fullPath }) => {
-  // TODO: dynamic path
-  const Doc = require(`../../../${fullPath}`).default
+const PostPage = ({ frontMatter, mdxHtml }) => {
   return (
     <>
       <S.Wrap>
@@ -14,9 +9,7 @@ const PostPage = ({ frontMatter, fullPath }) => {
         <S.Main>
           <Header />
           <h1>{frontMatter.title}</h1>
-          <MDXProvider components={components}>
-            <Doc />
-          </MDXProvider>
+          <div dangerouslySetInnerHTML={{ __html: mdxHtml }} />
         </S.Main>
       </S.Wrap>
     </>
