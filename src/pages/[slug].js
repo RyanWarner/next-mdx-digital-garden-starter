@@ -55,7 +55,6 @@ export async function getStaticProps({ params: { slug } }) {
           {content}
         </MDX>
       ),
-      fullPath,
       frontMatter: data || {}
     }
   }
