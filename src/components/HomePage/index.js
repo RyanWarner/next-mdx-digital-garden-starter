@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import Link from 'next/link'
 
-import { SEO, PostSnippet, GitHub } from 'components'
+import { SEO, PostSnippet, GitHub, ColorModeSelect } from 'components'
 import * as S from './styles'
 
 const githubUrl = 'https://github.com/RyanWarner/next-mdx-digital-garden-starter'
@@ -11,6 +11,7 @@ export default function HomePage ({ allMdx }) {
   return (
     <S.Wrap>
       <SEO />
+      <ColorModeSelect />
       <S.Main>
         <S.Seedling>🌱</S.Seedling>
         <S.H1>
@@ -31,10 +32,16 @@ export default function HomePage ({ allMdx }) {
           </S.ListItem>
         </S.FeatureList>
 
-        <S.GitHubButton href={githubUrl}>
+        <a 
+          href={githubUrl}
+          sx={{ 
+            mt: 4,
+            variant: "buttons.withIcon" 
+          }}
+        >
           <GitHub />
           <span>View source on GitHub</span>
-        </S.GitHubButton>
+        </a>
 
         <S.H2>
           Example posts
