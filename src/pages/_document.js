@@ -2,8 +2,8 @@ import Document from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import * as components from 'components'
 
+import * as components from 'components'
 import { getFilePathForSlug } from 'utils'
 
 // If a slug exists, return a component to be included in the collectStyles call.
