@@ -1,5 +1,6 @@
 import Document from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import * as components from 'components'
 
@@ -7,12 +8,10 @@ import { getFilePathForSlug } from 'utils'
 
 // If a slug exists, return a component to be included in the collectStyles call.
 // Without this, MDX styles will not work.
-// TODO: move this to utils
-const getMdx = (ctx) => {
-  const slug = ctx.query.slug
+export const requireMdxDocForSlug = (slug) => {
   if (!slug) return null
 
-  const path = getFilePathForSlug(ctx.query.slug)
+  const path = getFilePathForSlug(slug)
   const Doc = require(`../../${path}`).default
 
   return () => (
@@ -27,7 +26,7 @@ export default class MyDocument extends Document {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
-    const MDX = getMdx(ctx)
+    const MDX = requireMdxDocForSlug(ctx.query?.slug)
 
     try {
       ctx.renderPage = () =>

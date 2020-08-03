@@ -1,5 +1,3 @@
-// import matter from 'gray-matter'
-// import fs from 'fs'
 import glob from 'fast-glob'
 
 const contentGlob = 'src/content/**/*.mdx'
