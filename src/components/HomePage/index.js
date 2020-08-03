@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import Link from 'next/link'
 
 import { SEO, PostSnippet, GitHub } from 'components'
@@ -44,6 +46,10 @@ export default function HomePage ({ allMdx }) {
             </S.PostListItem>
           ))}
         </S.PostList>
+
+      <p sx={{ backgroundColor: "primary", color: "#fff", p: 4 }}>
+        🍅 Theme UI works if this box is rendered in tomato background.
+      </p>
       </S.Main>
     </S.Wrap>
   )
