@@ -5,7 +5,7 @@ import * as S from './styles'
 export default function PostSnippet ({ slug, frontMatter }) {
   return (
     <>
-      <Link href={slug}>
+      <Link href='/[slug]' as={slug} passHref>
         <a style={{
           fontSize: '25px',
           textDecoration: 'none',
