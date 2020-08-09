@@ -8,7 +8,6 @@ const PostPage = ({ frontMatter, mdxHtml }) => {
         <SEO title={frontMatter.title} />
         <S.Main>
           <Header />
-          asd
           <h1>{frontMatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: mdxHtml }} />
         </S.Main>

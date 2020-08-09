@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { SEO, PostSnippet, GitHub } from 'components'
+import { SEO, PostSnippet, GitHub, Header } from 'components'
 import * as S from './styles'
 
 const githubUrl = 'https://github.com/RyanWarner/next-mdx-digital-garden-starter'
@@ -9,8 +9,8 @@ export default function HomePage ({ allMdx }) {
   return (
     <S.Wrap>
       <SEO />
+      <Header />
       <S.Main>
-        <S.Seedling>🌱</S.Seedling>
         <S.H1>
           NextJS + MDX
           <br />

@@ -1,4 +1,5 @@
 export SEO from './SEO'
+export Width from './Width'
 export Header from './Header'
 export Example from './Example'
 export PostSnippet from './PostSnippet'

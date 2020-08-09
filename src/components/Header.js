@@ -1,23 +1,72 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
+import { Width } from 'components'
+
 const Nav = styled.nav`
   height: 70px;
   display: flex;
   align-items: center;
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  width: 100%;
+`
+
+const Wordmark = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const Logo = styled.span`
+  margin-right: 8px;
+  font-size: 20px;
+`
+
+const Name = styled.span`
+  font-weight: bold;
+`
+
+const NavItems = styled.ul`
+  margin-left: auto;
+  display: flex;
+`
+
+export const A = styled.a`
+  text-decoration: none;
+  color: ${props => props.theme.text10};
+  
+  &:hover {
+    color: ${props => props.theme.green10};
+  }
+`
+
+export const NavItem = styled.li`
+  margin-left: 14px;
+  list-style-type: none;
 `
 
 const Header = props =>
-  <Nav>
-    <Link href='/'>
-      <a>Home</a>
-    </Link>
-    <Link href='/about'>
-      <a>About</a>
-    </Link>
-  </Nav>
+  <Width>
+    <Nav>
+      <Link href='/' passHref>
+        <A>
+          <Wordmark>
+            <Logo>🌱</Logo>
+            <Name>Your Name</Name>
+          </Wordmark>
+        </A>
+      </Link>
+      <NavItems>
+        <NavItem>
+          <Link href='/garden' passHref>
+            <A>Digital Garden</A>
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link href='/about' passHref>
+            <A>About</A>
+          </Link>
+        </NavItem>
+      </NavItems>
+    </Nav>
+  </Width>
 
 export default Header
