@@ -5,7 +5,6 @@ export const Wrap = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 30px;
-  font-family: 'Lato', sans-serif;
 `
 
 export const Main = styled.main`
