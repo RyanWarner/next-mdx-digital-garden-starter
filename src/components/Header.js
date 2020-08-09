@@ -39,7 +39,7 @@ export const A = styled.a`
 `
 
 export const NavItem = styled.li`
-  margin-left: 14px;
+  margin-left: 24px;
   list-style-type: none;
 `
 

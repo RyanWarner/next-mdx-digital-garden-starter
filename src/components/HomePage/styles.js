@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Footer } from 'components'
 
 export const Wrap = styled.div`
   display: flex;
@@ -7,6 +8,10 @@ export const Wrap = styled.div`
   padding: 0 30px;
   min-height: 100vh;
   box-sizing: border-box;
+`
+
+export const StyledFooter = styled(Footer)`
+  margin-top: auto;
 `
 
 export const Main = styled.main`
@@ -38,10 +43,11 @@ export const GitHubButton = styled.a`
 `
 
 export const H2 = styled.h2`
-  letter-spacing: 0.07em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 100px;
+  color: ${props => props.theme.text20};
 `
 
 export const FeatureList = styled.ul`

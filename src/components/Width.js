@@ -12,7 +12,7 @@ const CenterContainer = styled.div`
 `
 
 const Width = ({ children, ...rest }) =>
-  <CenterContainer>
+  <CenterContainer {...rest}>
     <MaxWidth>
       {children}
     </MaxWidth>

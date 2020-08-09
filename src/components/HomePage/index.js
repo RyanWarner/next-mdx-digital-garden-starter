@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { SEO, PostSnippet, GitHub, Header } from 'components'
+import { SEO, PostSnippet, GitHub, Header, Footer } from 'components'
 import * as S from './styles'
 
 const githubUrl = 'https://github.com/RyanWarner/next-mdx-digital-garden-starter'
@@ -35,7 +35,7 @@ export default function HomePage ({ allMdx }) {
         </S.GitHubButton>
 
         <S.H2>
-          Example posts
+          Featured posts
         </S.H2>
         <S.PostList>
           {allMdx.map(item => (
@@ -45,6 +45,7 @@ export default function HomePage ({ allMdx }) {
           ))}
         </S.PostList>
       </S.Main>
+      <S.StyledFooter />
     </S.Wrap>
   )
 }
