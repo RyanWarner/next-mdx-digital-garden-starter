@@ -23,8 +23,8 @@ export default function SEO({
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
       <meta property='og:image' content={`${url}${ogImage}`} />
-      <meta propert='og:image:width' content='1200' />
-      <meta propert='og:image:height' content='630' />
+      <meta property='og:image:width' content='1200' />
+      <meta property='og:image:height' content='630' />
       <meta name='twitter:site' content={twitterHandle} />
       <meta name='twitter:card' content='summary_large_image' />
       <link rel='icon' href={favicon} />
