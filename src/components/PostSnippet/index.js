@@ -14,9 +14,9 @@ export default function PostSnippet ({ slug, frontMatter }) {
           {frontMatter.title}
         </a>
       </Link>
-      <S.Date>
-        {frontMatter.date}
-      </S.Date>
+      <S.Description>
+        {frontMatter.description}
+      </S.Description>
     </>
   )
 }
