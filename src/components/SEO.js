@@ -1,13 +1,6 @@
 import Head from 'next/head'
 
-const siteMetadata = {
-  title: 'NextJS MDX Digital Garden Starter',
-  description: 'An opinionated starting point for authoring interactive content using MDX and NextJS',
-  twitterHandle: '@RyanWarnerCodes',
-  favicon: '/favicon.png',
-  ogImage: '/ogImage.png',
-  url: 'https://next-mdx.warner.codes'
-}
+import siteMetadata from 'siteMetadata'
 
 export default function SEO({
   title,

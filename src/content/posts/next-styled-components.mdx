@@ -1,8 +1,70 @@
 ---
 title: 'Next & Styled Components'
+description: 'Step by step instructions for installing Styled Components and using it with this starter.'
 date: 'July 21, 2020'
 ---
 
 ## Installation
 
+```bash
+npm i styled-components babel-plugin-styled-components
+```
+
 ## Configuration
+
+1. Add the [Babel plugin](https://styled-components.com/docs/tooling#babel-plugin) to your `.babelrc`. Make sure `ssr` is set to `true` because our static page generation happens server side.
+
+  ```
+    "plugins": [
+      [
+        "styled-components",
+        {
+          "ssr": true
+        }
+      ],
+      ...
+  ```
+
+2. Configure Styled Components for Server Side Rendering.
+
+  To learn more about how and why we need to do this, see the [Styled Components advanced docs](https://styled-components.com/docs/advanced#server-side-rendering).
+  We'll be using the [official Next example](https://github.com/vercel/next.js/tree/canary/examples/with-styled-components) as a guide.
+  
+  Create a new file, `pages/_document.js`
+
+  ```js
+    import Document from 'next/document'
+    import { ServerStyleSheet } from 'styled-components'
+
+    export default class MyDocument extends Document {
+      static async getInitialProps(ctx) {
+        const sheet = new ServerStyleSheet()
+        const originalRenderPage = ctx.renderPage
+
+        try {
+          ctx.renderPage = () =>
+            originalRenderPage({
+              enhanceApp: (App) => (props) =>
+                sheet.collectStyles(<App {...props} />),
+            })
+
+          const initialProps = await Document.getInitialProps(ctx)
+          return {
+            ...initialProps,
+            styles: (
+              <>
+                {initialProps.styles}
+                {sheet.getStyleElement()}
+              </>
+            ),
+          }
+        } finally {
+          sheet.seal()
+        }
+      }
+    }
+  ```
+
+3. Start styling 🎨
+
+  You're all set to start using Styled Components in your NextJS app!

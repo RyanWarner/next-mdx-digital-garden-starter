@@ -1,13 +1,7 @@
-export const p = ({ children }) => {
-  return (
-    <p
-      style={{
-        fontSize: '18px',
-        lineHeight: '180%',
-        marginBottom: '3rem'
-      }}
-    >
-      {children}
-    </p>
-  )
-}
+import styled from 'styled-components'
+
+export const p = styled.p`
+  font-size: 18px;
+  line-height: 180%;
+  margin-bottom: 3rem;
+`

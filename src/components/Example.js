@@ -1,6 +1,12 @@
-import React from 'react'
+import styled from 'styled-components'
+
+const ExampleComponent = styled.div`
+  color: green;
+`
 
 const Example = props =>
-  <h1>This is an example component</h1>
+  <ExampleComponent>
+    This is an example component
+  </ExampleComponent>
 
 export default Example
