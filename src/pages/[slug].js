@@ -1,4 +1,3 @@
-
 import fs from 'fs'
 import MDX from '@mdx-js/runtime'
 import ReactDOM from 'react-dom/server'
@@ -10,21 +9,20 @@ import * as components from 'components'
 // This glob is what will be used to generate static routes
 const contentGlob = 'src/content/**/*.mdx'
 
-export async function getStaticPaths() {
+export async function getStaticPaths () {
   const files = glob.sync(contentGlob)
 
-  const paths = files
-    .map(file => {
-      const split = file.split('/')
-      const filename = split[split.length - 1]
-      const slug = filename.replace('.mdx', '')
+  const paths = files.map(file => {
+    const split = file.split('/')
+    const filename = split[split.length - 1]
+    const slug = filename.replace('.mdx', '')
 
-      return {
-        params: {
-          slug
-        }
+    return {
+      params: {
+        slug
       }
-    })
+    }
+  })
 
   return {
     paths,
@@ -32,7 +30,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps ({ params: { slug } }) {
   const files = glob.sync(contentGlob)
 
   const fullPath = files.filter(item => {
@@ -51,9 +49,7 @@ export async function getStaticProps({ params: { slug } }) {
   return {
     props: {
       mdxHtml: ReactDOM.renderToStaticMarkup(
-        <MDX components={components}>
-          {content}
-        </MDX>
+        <MDX components={components}>{content}</MDX>
       ),
       frontMatter: data || {}
     }

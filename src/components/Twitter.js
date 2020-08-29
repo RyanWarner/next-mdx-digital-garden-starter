@@ -1,4 +1,4 @@
-const Twitter = props =>
+const Twitter = props => (
   <svg
     {...props}
     width='20'
@@ -12,6 +12,6 @@ const Twitter = props =>
       fill='#1E1E1B'
     />
   </svg>
-
+)
 
 export default Twitter

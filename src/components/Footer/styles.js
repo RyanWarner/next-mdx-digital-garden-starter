@@ -26,9 +26,7 @@ export const StyledGitHub = styled(GitHub)`
   margin-left: 12px;
 `
 
-export const StyledTwitter = styled(Twitter)`
-
-`
+export const StyledTwitter = styled(Twitter)``
 
 export const A = styled.a`
   &:hover {

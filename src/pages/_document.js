@@ -7,7 +7,7 @@ import { getFilePathForSlug } from 'utils'
 
 // If a slug exists, return a component to be included in the collectStyles call.
 // Without this, MDX styles will not work.
-export const requireMdxDocForSlug = (slug) => {
+export const requireMdxDocForSlug = slug => {
   if (!slug) return null
 
   const path = getFilePathForSlug(slug)
@@ -21,7 +21,7 @@ export const requireMdxDocForSlug = (slug) => {
 }
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps (ctx) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
@@ -30,13 +30,13 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) =>
+          enhanceApp: App => props =>
             sheet.collectStyles(
               <>
                 <App {...props} />
                 {MDX && <MDX />}
               </>
-            ),
+            )
         })
 
       const initialProps = await Document.getInitialProps(ctx)
@@ -47,7 +47,7 @@ export default class MyDocument extends Document {
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
-        ),
+        )
       }
     } finally {
       sheet.seal()
