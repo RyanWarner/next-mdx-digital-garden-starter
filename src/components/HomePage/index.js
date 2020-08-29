@@ -1,9 +1,8 @@
-import Link from 'next/link'
-
-import { SEO, PostSnippet, GitHub, Header, Footer } from 'components'
+import { SEO, PostSnippet, GitHub, Header } from 'components'
 import * as S from './styles'
 
-const githubUrl = 'https://github.com/RyanWarner/next-mdx-digital-garden-starter'
+const githubUrl =
+  'https://github.com/RyanWarner/next-mdx-digital-garden-starter'
 
 export default function HomePage ({ allMdx }) {
   return (
@@ -24,9 +23,7 @@ export default function HomePage ({ allMdx }) {
           <S.ListItem>
             Statically generated routes using Next’s `getStaticPaths`.
           </S.ListItem>
-          <S.ListItem>
-            Supports frontmatter (thanks to gray-matter).
-          </S.ListItem>
+          <S.ListItem>Supports frontmatter (thanks to gray-matter).</S.ListItem>
         </S.FeatureList>
 
         <S.GitHubButton href={githubUrl}>
@@ -34,9 +31,7 @@ export default function HomePage ({ allMdx }) {
           <span>View source on GitHub</span>
         </S.GitHubButton>
 
-        <S.H2>
-          Featured posts
-        </S.H2>
+        <S.H2>Featured posts</S.H2>
         <S.PostList>
           {allMdx.map(item => (
             <S.PostListItem key={item.slug}>

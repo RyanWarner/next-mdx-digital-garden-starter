@@ -1,6 +1,7 @@
-export default{
+export default {
   title: 'NextJS MDX Digital Garden Starter',
-  description: 'An opinionated starting point for authoring interactive content using MDX and NextJS',
+  description:
+    'An opinionated starting point for authoring interactive content using MDX and NextJS',
   twitterHandle: '@RyanWarnerCodes',
   githubUsername: 'RyanWarner',
   author: 'Your Name',

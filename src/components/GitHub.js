@@ -1,4 +1,4 @@
-const GitHub = props =>
+const GitHub = props => (
   <svg
     {...props}
     role='img'
@@ -14,5 +14,6 @@ const GitHub = props =>
       fill='#000'
     />
   </svg>
+)
 
 export default GitHub

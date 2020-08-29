@@ -2,7 +2,7 @@ import glob from 'fast-glob'
 
 const contentGlob = 'src/content/**/*.mdx'
 
-export const getSlugForFilePath = (path) => {
+export const getSlugForFilePath = path => {
   const split = path.split('/')
   const filename = split[split.length - 1]
   const slug = filename.replace('.mdx', '')
@@ -20,6 +20,6 @@ export const getContent = () => {
 
 const content = getContent()
 
-export const getFilePathForSlug = (slug) => {
+export const getFilePathForSlug = slug => {
   return content.filter(item => item.slug === slug)[0].filepath
 }

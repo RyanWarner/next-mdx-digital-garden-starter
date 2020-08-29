@@ -6,7 +6,7 @@ import { HomePage } from 'components'
 
 export default HomePage
 
-export async function getStaticProps() {
+export async function getStaticProps () {
   const files = glob.sync('src/content/**/*.mdx')
 
   const allMdx = files.map(file => {

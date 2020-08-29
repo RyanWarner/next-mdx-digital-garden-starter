@@ -6,17 +6,17 @@ export default function PostSnippet ({ slug, frontMatter }) {
   return (
     <>
       <Link href='/[slug]' as={slug} passHref>
-        <a style={{
-          fontSize: '25px',
-          textDecoration: 'none',
-          color: 'black'
-        }}>
+        <a
+          style={{
+            fontSize: '25px',
+            textDecoration: 'none',
+            color: 'black'
+          }}
+        >
           {frontMatter.title}
         </a>
       </Link>
-      <S.Description>
-        {frontMatter.description}
-      </S.Description>
+      <S.Description>{frontMatter.description}</S.Description>
     </>
   )
 }

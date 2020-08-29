@@ -5,7 +5,7 @@ import { GlobalStyle } from '../styles/Global'
 import Theme from 'styles/Theme'
 
 export default class MyApp extends App {
-  render() {
+  render () {
     const { Component, pageProps } = this.props
     return (
       <ThemeProvider theme={Theme.light}>

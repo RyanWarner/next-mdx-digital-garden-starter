@@ -11,11 +11,10 @@ const CenterContainer = styled.div`
   width: 100%;
 `
 
-const Width = ({ children, ...rest }) =>
+const Width = ({ children, ...rest }) => (
   <CenterContainer {...rest}>
-    <MaxWidth>
-      {children}
-    </MaxWidth>
+    <MaxWidth>{children}</MaxWidth>
   </CenterContainer>
+)
 
 export default Width

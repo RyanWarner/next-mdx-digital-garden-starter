@@ -33,7 +33,7 @@ const NavItems = styled.ul`
 export const A = styled.a`
   text-decoration: none;
   color: ${props => props.theme.text10};
-  
+
   &:hover {
     color: ${props => props.theme.green10};
   }
@@ -44,7 +44,7 @@ export const NavItem = styled.li`
   list-style-type: none;
 `
 
-const Header = props =>
+const Header = props => (
   <Width>
     <Nav>
       <Link href='/' passHref>
@@ -69,5 +69,6 @@ const Header = props =>
       </NavItems>
     </Nav>
   </Width>
+)
 
 export default Header

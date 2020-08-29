@@ -2,7 +2,7 @@ import * as S from './styles'
 import { Width } from 'components'
 import siteMetadata from 'siteMetadata'
 
-const Footer = props =>
+const Footer = props => (
   <Width {...props}>
     <S.Footer>
       <S.Copyright>
@@ -18,5 +18,6 @@ const Footer = props =>
       </S.Social>
     </S.Footer>
   </Width>
+)
 
 export default Footer

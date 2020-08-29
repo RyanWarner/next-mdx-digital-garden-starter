@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import siteMetadata from 'siteMetadata'
 
-export default function SEO({
+export default function SEO ({
   title,
   description,
   twitterHandle,
@@ -22,7 +22,10 @@ export default function SEO({
       <meta name='twitter:card' content='summary_large_image' />
       <link rel='icon' href={favicon} />
       <meta name='twitter:image' content={`${url}${ogImage}`} />
-      <link href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap' rel='stylesheet' />
+      <link
+        href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'
+        rel='stylesheet'
+      />
     </Head>
   )
 }
