@@ -1,6 +1,4 @@
-import Link from 'next/link'
-
-import { SEO, PostSnippet, GitHub, Header, Footer } from 'components'
+import { SEO, PostSnippet, GitHub, Header } from 'components'
 import * as S from './styles'
 
 const githubUrl =
