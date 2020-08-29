@@ -12,6 +12,7 @@ export const Wrap = styled.div`
 
 export const StyledFooter = styled(Footer)`
   margin-top: auto;
+  padding-top: 40px;
 `
 
 export const Main = styled.main`

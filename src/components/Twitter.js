@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Twitter = props =>
   <svg
     {...props}

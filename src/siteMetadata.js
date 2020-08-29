@@ -3,7 +3,7 @@ export default{
   description: 'An opinionated starting point for authoring interactive content using MDX and NextJS',
   twitterHandle: '@RyanWarnerCodes',
   githubUsername: 'RyanWarner',
-  author: 'Ryan Warner',
+  author: 'Your Name',
   favicon: '/favicon.png',
   ogImage: '/ogImage.png',
   url: 'https://next-mdx.warner.codes'

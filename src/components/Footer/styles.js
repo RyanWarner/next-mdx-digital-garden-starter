@@ -8,6 +8,7 @@ export const Footer = styled.footer`
   display: flex;
   align-items: center;
   width: 100%;
+  border-top: 1px solid ${props => props.theme.rule};
 `
 
 export const Copyright = styled.p`
