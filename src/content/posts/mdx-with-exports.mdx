@@ -1,0 +1,14 @@
+---
+title: 'MDX with frontmatter and exports'
+description: 'An example to show the ability to use exports with an MDX post.'
+date: 'August 29, 2020'
+---
+export const somevar = 'this is a test'
+export const MyDiv = ({value}) => (<div>{value}</div>)
+const withoutexport = 'Without Export'
+
+<MyDiv value={somevar} />
+
+<div>{withoutexport}</div>
+
+<Example />
