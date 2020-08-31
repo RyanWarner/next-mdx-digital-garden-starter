@@ -3,13 +3,12 @@ import matter from 'gray-matter'
 import glob from 'fast-glob'
 
 import * as components from 'components'
+import { renderWithReact } from 'utils/renderWithReact'
 
 // This glob is what will be used to generate static routes
 const contentGlob = 'src/content/**/*.mdx'
 
-import { renderWithReact } from 'utils/renderWithReact'
-
-export async function getStaticPaths () {
+export async function getStaticPaths() {
   const files = glob.sync(contentGlob)
 
   const paths = files.map(file => {
@@ -30,7 +29,7 @@ export async function getStaticPaths () {
   }
 }
 
-export async function getStaticProps ({ params: { slug } }) {
+export async function getStaticProps({ params: { slug } }) {
   const files = glob.sync(contentGlob)
 
   const fullPath = files.filter(item => {
