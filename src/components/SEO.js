@@ -11,7 +11,7 @@ export default function SEO ({
   url,
   links
 }) {
-  const Links = () => links.map(({ props }) => <link {...props} />)
+  const Links = () => links.map(props => <link {...props} />)
 
   return (
     <Head>
