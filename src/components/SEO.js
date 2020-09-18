@@ -9,10 +9,9 @@ export default function SEO ({
   favicon,
   ogImage,
   url,
-  fonts
+  links
 }) {
-  const Fonts = () =>
-    fonts.map(({ url, ...rest }) => <link href={url} {...rest} />)
+  const Links = () => links.map(({ props }) => <link {...props} />)
 
   return (
     <Head>
@@ -20,7 +19,7 @@ export default function SEO ({
 
       <link rel='icon' href={favicon} />
 
-      <Fonts />
+      <Links />
 
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
