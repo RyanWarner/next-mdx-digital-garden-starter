@@ -12,7 +12,7 @@ export default function SEO ({
   fonts
 }) {
   const Fonts = () =>
-    fonts.map(font => <link href={font.url} rel='preload' as='font' />)
+    fonts.map(font => <link href={font.url} rel='stylesheet' />)
 
   return (
     <Head>
