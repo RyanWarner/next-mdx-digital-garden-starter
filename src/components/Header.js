@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import siteMetadata from 'siteMetadata'
+import siteConfig from 'site.config'
 import styled from 'styled-components'
 
 import { Width } from 'components'
@@ -51,7 +51,7 @@ const Header = props => (
         <A>
           <Wordmark>
             <Logo>🌱</Logo>
-            <Name>{siteMetadata.author}</Name>
+            <Name>{siteConfig.author}</Name>
           </Wordmark>
         </A>
       </Link>

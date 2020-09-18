@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import siteMetadata from 'siteMetadata'
+import siteConfig from 'site.config'
 
 export default function SEO ({
   title,
@@ -9,12 +9,7 @@ export default function SEO ({
   favicon,
   ogImage,
   url,
-  fonts = [
-    {
-      url:
-        'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'
-    }
-  ]
+  fonts
 }) {
   const Fonts = () =>
     fonts.map(font => <link href={font.url} rel='preload' as='font' />)
@@ -40,5 +35,5 @@ export default function SEO ({
 }
 
 SEO.defaultProps = {
-  ...siteMetadata
+  ...siteConfig
 }
