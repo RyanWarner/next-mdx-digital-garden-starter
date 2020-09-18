@@ -12,7 +12,7 @@ export default function SEO ({
   fonts
 }) {
   const Fonts = () =>
-    fonts.map(font => <link href={font.url} rel='stylesheet' />)
+    fonts.map(({ url, ...rest }) => <link href={url} {...rest} />)
 
   return (
     <Head>

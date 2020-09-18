@@ -11,7 +11,15 @@ export default {
   fonts: [
     {
       url:
-        'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'
+        'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap',
+      rel: 'stylesheet'
     }
+    /* an example of a none stylesheet font you just want to preload
+    {
+      url: 'https://myhosting/SomeFont.woff',
+      rel: 'preload',
+      as: 'font'
+    }
+    */
   ]
 }
