@@ -30,6 +30,7 @@ export default function SEO ({
       <meta name='twitter:site' content={twitterHandle} />
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:image' content={`${url}${ogImage}`} />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     </Head>
   )
 }
