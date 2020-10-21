@@ -7,5 +7,11 @@ export default {
   author: 'Your Name',
   favicon: '/favicon.png',
   ogImage: '/ogImage.png',
-  url: 'https://next-mdx.warner.codes'
+  url: 'https://next-mdx.warner.codes',
+  fonts: [
+    {
+      url:
+        'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'
+    }
+  ]
 }
