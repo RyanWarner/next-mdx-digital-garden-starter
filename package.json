@@ -26,8 +26,8 @@
     "babel-plugin-module-resolver": "4.0.0",
     "babel-plugin-remove-export-keywords": "1.6.16",
     "babel-plugin-styled-components": "1.11.1",
-    "file-loader": "6.1.0",
+    "file-loader": "6.1.1",
     "prettier-standard": "16.4.1",
-    "url-loader": "4.1.0"
+    "url-loader": "4.1.1"
   }
 }
