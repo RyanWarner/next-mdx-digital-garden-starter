@@ -22,7 +22,7 @@
     "styled-components": "5.2.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-export-default-from": "7.10.4",
+    "@babel/plugin-proposal-export-default-from": "7.12.1",
     "babel-plugin-module-resolver": "4.0.0",
     "babel-plugin-remove-export-keywords": "1.6.16",
     "babel-plugin-styled-components": "1.11.1",
