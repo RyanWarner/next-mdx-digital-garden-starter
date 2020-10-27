@@ -5,4 +5,5 @@ export PostSnippet from './PostSnippet'
 export GitHub from './GitHub'
 export HomePage from './HomePage'
 export PostPage from './PostPage'
+export ColorModeSelect from "./ColorModeSelect";
 export * from './MDXOverrideComponents'

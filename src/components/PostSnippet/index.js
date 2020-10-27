@@ -1,22 +1,25 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import Link from 'next/link'
-
-import * as S from './styles'
 
 export default function PostSnippet ({ slug, frontMatter }) {
   return (
     <>
       <Link href={slug}>
-        <a style={{
-          fontSize: '25px',
-          textDecoration: 'none',
-          color: 'black'
-        }}>
+        <a
+          sx={{ variant: "links.snippet" }}
+        >
           {frontMatter.title}
         </a>
       </Link>
-      <S.Date>
+      <div
+        sx={{
+          mt: 2,
+          variant: "text.date.snippet",
+        }}
+      >
         {frontMatter.date}
-      </S.Date>
+      </div>
     </>
   )
 }

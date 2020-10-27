@@ -6,7 +6,6 @@ export const Wrap = ({ children }) => (
       alignItems: 'center',
       padding: '0 30px',
       fontFamily: `'Lato', sans-serif`,
-      backgroundColor: '#FBFBF9',
       minHeight: '100vh',
       boxSizing: 'border-box'
     }}
@@ -44,7 +43,6 @@ export const GitHubButton = ({ children, ...rest }) => (
       borderRadius: '4px',
       border: '1px solid black',
       padding: '10px 12px',
-      color: 'black',
       textDecoration: 'none',
       marginTop: '20px',
       display: 'grid',
