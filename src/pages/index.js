@@ -19,12 +19,12 @@ export async function getStaticProps () {
 
     return {
       slug,
-      frontMatter: data
+      frontmatter: data
     }
   })
 
   const orderedByDate = allMdx.sort((a, b) => {
-    return new Date(b.frontMatter.date) - new Date(a.frontMatter.date)
+    return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
   })
 
   return {

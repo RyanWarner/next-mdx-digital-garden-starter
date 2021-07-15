@@ -50,7 +50,7 @@ export async function getStaticProps({ params: { slug } }) {
   return {
     props: {
       mdxHtml,
-      frontMatter: data || {}
+      frontmatter: data || {}
     }
   }
 }

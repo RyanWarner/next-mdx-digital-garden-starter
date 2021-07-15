@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import * as S from './styles'
 
-export default function PostSnippet ({ slug, frontMatter }) {
+export default function PostSnippet ({ slug, frontmatter }) {
   return (
     <>
       <Link href='/[slug]' as={slug} passHref>
@@ -13,10 +13,10 @@ export default function PostSnippet ({ slug, frontMatter }) {
             color: 'black'
           }}
         >
-          {frontMatter.title}
+          {frontmatter.title}
         </a>
       </Link>
-      <S.Description>{frontMatter.description}</S.Description>
+      <S.Description>{frontmatter.description}</S.Description>
     </>
   )
 }
