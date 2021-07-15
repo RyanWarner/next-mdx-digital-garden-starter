@@ -9,8 +9,8 @@
     "lint": "prettier-standard --lint 'src/**/*.{js,jsx,json,md}'"
   },
   "dependencies": {
-    "@mdx-js/loader": "^2.0.0-next.7",
-    "@mdx-js/runtime": "^2.0.0-next.7",
+    "@mdx-js/loader": "^2.0.0-next.9",
+    "@mdx-js/runtime": "^2.0.0-next.9",
     "@mdx-js/tag": "^0.20.3",
     "@next/mdx": "11.0.1",
     "fast-glob": "3.2.7",
