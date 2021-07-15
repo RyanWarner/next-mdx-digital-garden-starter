@@ -1,6 +1,6 @@
 import glob from 'fast-glob'
 
-const contentGlob = 'src/content/**/*.mdx'
+import contentGlob from './contentGlob'
 
 export const getSlugForFilePath = path => {
   const split = path.split('/')
