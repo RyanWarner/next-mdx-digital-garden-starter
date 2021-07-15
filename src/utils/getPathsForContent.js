@@ -8,7 +8,7 @@ const getSinglePost = () => {
   const paths = files.map(file => {
     const split = file.split('/')
     const filename = split[split.length - 1]
-    const slug = filename.replace('.mdx', '')
+    const slug = filename.replace('.mdx', '').replace('.md', '')
 
     return {
       params: {

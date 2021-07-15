@@ -1,2 +1,2 @@
-const contentGlob = 'src/content/**/*.mdx'
+const contentGlob = 'src/content/**/*.{md,mdx}'
 export default contentGlob

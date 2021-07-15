@@ -12,7 +12,7 @@ const getSinglePost = async (slug) => {
   const fullPath = files.filter(item => {
     const split = item.split('/')
     const filename = split[split.length - 1]
-    return filename.replace('.mdx', '') === slug
+    return filename.replace('.mdx', '').replace('.md', '') === slug
   })[0]
 
   const mdxSource = fs.readFileSync(fullPath)

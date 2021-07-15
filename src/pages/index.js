@@ -7,12 +7,12 @@ import { HomePage } from 'components'
 export default HomePage
 
 export async function getStaticProps () {
-  const files = glob.sync('src/content/**/*.mdx')
+  const files = glob.sync('src/content/**/*.{md,mdx}')
 
   const allMdx = files.map(file => {
     const split = file.split('/')
     const filename = split[split.length - 1]
-    const slug = filename.replace('.mdx', '')
+    const slug = filename.replace('.mdx', '').replace('.md', '')
 
     const mdxSource = fs.readFileSync(file)
     const { data } = matter(mdxSource)

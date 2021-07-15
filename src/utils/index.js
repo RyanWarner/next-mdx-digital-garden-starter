@@ -5,7 +5,7 @@ import contentGlob from './contentGlob'
 export const getSlugForFilePath = path => {
   const split = path.split('/')
   const filename = split[split.length - 1]
-  const slug = filename.replace('.mdx', '')
+  const slug = filename.replace('.mdx', '').replace('.md', '')
   return slug
 }
 
