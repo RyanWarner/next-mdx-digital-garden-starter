@@ -2,6 +2,8 @@
 
 An opinionated starting point for Digital Garden content authoring.
 
+Note: This setup does not handle code-splitting. I tried switching to `mdx-bundler` but could not get it to work.
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2FRyanWarner%2Fnext-mdx-digital-garden-starter)
 
 ## Getting started
@@ -10,6 +12,12 @@ An opinionated starting point for Digital Garden content authoring.
 npm install
 npm run dev
 ```
+
+## Use
+
+- Write MDX in the `content` directory.
+- Put components in the `components` directory.
+- Use components in MDX (without imports).
 
 ## Goals
 
