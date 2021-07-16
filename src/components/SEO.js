@@ -8,19 +8,18 @@ export default function SEO ({
   twitterHandle,
   favicon,
   ogImage,
-  url,
-  fonts
+  url
 }) {
-  const Fonts = () =>
-    fonts.map(font => <link href={font.url} rel='preload' as='font' />)
-
   return (
     <Head>
       <title>{title}</title>
 
       <link rel='icon' href={favicon} />
 
-      <Fonts />
+      <link
+        href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'
+        rel='stylesheet'
+      />
 
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
