@@ -1,2 +1,2 @@
-const contentGlob = ['src/_content/**/*.{md,mdx}', '!src/_content/_templates']
+const contentGlob = ['_content/**/*.{md,mdx}', '!_content/_templates']
 export default contentGlob
