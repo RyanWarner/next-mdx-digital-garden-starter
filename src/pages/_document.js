@@ -2,6 +2,8 @@ import Document from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import { MDXProvider } from '@mdx-js/react'
 import glob from 'fast-glob'
+import fs from 'fs'
+import MDXRuntime from '@mdx-js/runtime'
 
 import * as components from 'components'
 import contentGlob from 'utils/contentGlob'
@@ -17,13 +19,17 @@ import contentGlob from 'utils/contentGlob'
   const files = glob.sync(contentGlob)
   const mdxDocs = []
 
-  files.forEach(file => {
-    mdxDocs.push(require(`../../${file}`).default)
-  })
+  for (const file of files) {
+    const mdxSource = fs.readFileSync(file)
+
+    mdxDocs.push(<MDXRuntime children={mdxSource} />)
+  }
 
   return () => (
     <MDXProvider components={components}>
-      {mdxDocs.map(MdxDoc => <MdxDoc />)}
+      {mdxDocs.map(MdxDoc => {
+        return MdxDoc
+      })}
     </MDXProvider>
   )
 }
