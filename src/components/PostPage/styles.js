@@ -12,4 +12,6 @@ export const Main = styled.main`
   width: 100%;
 `
 
-export const H1 = styled.h1``
+export const H1 = styled.h1`
+  color: green;
+`

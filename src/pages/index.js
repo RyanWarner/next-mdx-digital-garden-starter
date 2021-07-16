@@ -25,7 +25,7 @@ export async function getStaticProps () {
   })
 
   const orderedByDate = allMdx.sort((a, b) => {
-    return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+    return new Date(b.frontmatter.timestamp) - new Date(a.frontmatter.timestamp)
   })
 
   return {
