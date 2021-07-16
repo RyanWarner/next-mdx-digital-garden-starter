@@ -1,21 +1,29 @@
 import Document from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import { MDXProvider } from '@mdx-js/react'
+import glob from 'fast-glob'
 
 import * as components from 'components'
-import { getFilePathForSlug } from 'utils'
+import contentGlob from 'utils/contentGlob'
 
-// If a slug exists, return a component to be included in the collectStyles call.
-// Without this, MDX styles will not work.
-export const requireMdxDocForSlug = slug => {
-  if (!slug) return null
+/**
+ * We have to include all of our MDX documents in the
+ * collectStyles call for Styled Components to work properly.
+ *
+ * This could potentially create performance issues on large
+ * sites with lots of bespoke components. Is there a better way?
+ */
+ export const getAllMdx = slug => {
+  const files = glob.sync(contentGlob)
+  const mdxDocs = []
 
-  const path = getFilePathForSlug(slug)
-  const Doc = require(`../../${path}`).default
+  files.forEach(file => {
+    mdxDocs.push(require(`../../${file}`).default)
+  })
 
   return () => (
     <MDXProvider components={components}>
-      <Doc />
+      {mdxDocs.map(MdxDoc => <MdxDoc />)}
     </MDXProvider>
   )
 }
@@ -25,7 +33,7 @@ export default class MyDocument extends Document {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
-    const MDX = requireMdxDocForSlug(ctx.query?.slug)
+    const MDX = getAllMdx()
 
     try {
       ctx.renderPage = () =>
