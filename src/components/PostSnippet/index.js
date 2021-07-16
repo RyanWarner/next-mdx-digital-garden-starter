@@ -3,9 +3,11 @@ import Link from 'next/link'
 import * as S from './styles'
 
 export default function PostSnippet ({ slug, frontmatter }) {
+  const href = `/${slug}`
+
   return (
     <>
-      <Link href='/[slug]' as={slug} passHref>
+      <Link href={href} passHref>
         <a
           style={{
             fontSize: '25px',
