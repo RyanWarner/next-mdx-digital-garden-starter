@@ -13,7 +13,7 @@ import contentGlob from 'utils/contentGlob'
  * This could potentially create performance issues on large
  * sites with lots of bespoke components. Is there a better way?
  */
- export const getAllMdx = slug => {
+ export const getAllMdx = async () => {
   const files = glob.sync(contentGlob)
   const mdxDocs = []
 
@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
-    const MDX = getAllMdx()
+    const MDX = await getAllMdx()
 
     try {
       ctx.renderPage = () =>

@@ -3,11 +3,12 @@ import matter from 'gray-matter'
 import glob from 'fast-glob'
 
 import { HomePage } from 'components'
+import contentGlob from 'utils/contentGlob'
 
 export default HomePage
 
 export async function getStaticProps () {
-  const files = glob.sync('src/content/**/*.{md,mdx}')
+  const files = glob.sync(contentGlob)
 
   const allMdx = files.map(file => {
     const split = file.split('/')
